@@ -1,6 +1,7 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "module": "esnext",
     "target": "esnext",
     "lib": [
@@ -9,7 +10,7 @@
     ],
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    // "skipLibCheck": true,
     "jsx": "preserve",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -18,11 +19,11 @@
     "types": [
       "vite/client"
     ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
+    // "paths": {
+    //   "@/*": [
+    //     "src/*"
+    //   ]
+    // }
   },
   "include": [
     "src/**/*.ts",

@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { x } from '@shared/test'
+
+console.log(x)
+</script>
 
 <template>
   <router-view />
