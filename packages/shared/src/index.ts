@@ -1,6 +1,8 @@
-export const x = 'hello world 3'
-
-export interface IUser {
-  id: number
+export type GetUser = {
+  id: 222
   email: string
+}
+
+export type GetUserQuery = {
+  user: GetUser
 }

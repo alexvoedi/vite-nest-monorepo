@@ -1,8 +1,7 @@
 import { Field, ID, ObjectType } from '@nestjs/graphql';
-import { IUser } from 'shared';
 
 @ObjectType()
-export class User implements IUser {
+export class User {
   @Field(() => ID)
   id: number;
 

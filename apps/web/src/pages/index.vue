@@ -1,18 +1,31 @@
 <script setup lang="ts">
-import { IUser } from 'shared'
+import { useQuery } from '@vue/apollo-composable'
+import { gql } from "@apollo/client/core";
+import { GetUser, GetUserQuery } from 'shared'
 
-const { t } = useI18n()
-
-const user: IUser = {
-  id: 3,
-  email: 'john.doe@exmaple.com'
+const user: GetUser = {
+  id: 6,
+  email: 'john.doe@example.com',
 }
+
+const { result, loading } = useQuery<GetUserQuery>(gql`
+  query {
+    user {
+      id
+      email
+    }
+  }
+`)
+
 </script>
 
 <template>
-  <div>
-    <h1>{{ t('hello') }}</h1>
-    <p>{{ user.email }}</p>
+  <div v-if="loading">
+    <p>Loading...</p>
+  </div>
+
+  <div v-else-if="result">
+    <p>{{ result.user }}</p>
   </div>
 </template>
 
