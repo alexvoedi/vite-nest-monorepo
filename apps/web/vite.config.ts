@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Inspect from 'vite-plugin-inspect'
+import Checker from 'vite-plugin-checker'
 import { VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
@@ -56,6 +57,11 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-inspect
     Inspect(),
+
+    // https://github.com/fi3ework/vite-plugin-checker
+    Checker({
+      vueTsc: true,
+    }),
   ],
 
   server: {

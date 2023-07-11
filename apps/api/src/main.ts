@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
-import { Logger } from '@nestjs/common';
+import { Logger } from 'nestjs-pino';
 import compression from '@fastify/compress';
 import helmet from '@fastify/helmet';
 import {
@@ -12,7 +12,14 @@ async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter(),
+    {
+      bufferLogs: true,
+    },
   );
+
+  const logger = app.get(Logger);
+
+  app.useLogger(logger);
 
   await app.register(compression, { encodings: ['gzip', 'deflate'] });
 
@@ -44,7 +51,7 @@ async function bootstrap() {
   const PORT = process.env.PORT || 3000;
 
   await app.listen(PORT, '0.0.0.0', () => {
-    Logger.log(`Listening on port ${PORT}`, 'NestApplication');
+    logger.log(`Listening on port ${PORT}`, 'NestApplication');
   });
 }
 

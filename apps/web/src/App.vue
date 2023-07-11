@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { x } from 'shared'
-
-console.log(x)
 </script>
 
 <template>

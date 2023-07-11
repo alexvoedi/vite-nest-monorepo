@@ -6,7 +6,7 @@ export class UserResolver {
   @Query(() => User)
   async user(): Promise<User> {
     return {
-      id: '1',
+      id: 1,
       email: 'john.doe@example.com',
     };
   }
