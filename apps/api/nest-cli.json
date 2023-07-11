@@ -5,6 +5,7 @@
   "entryFile": "main",
   "compilerOptions": {
     "deleteOutDir": true,
-    "builder": "swc"
+    "builder": "swc",
+    "typeCheck": true
   }
 }
