@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { x } from '@shared/test'
+import { x } from 'shared'
 
 @Module({
   imports: [],

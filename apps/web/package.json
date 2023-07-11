@@ -8,6 +8,7 @@
     "name": "",
     "email": ""
   },
+  "type": "module",
   "license": "UNLICENSED",
   "homepage": "",
   "repository": {
@@ -27,6 +28,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "shared": "workspace:*",
     "@vueuse/core": "^10.2.1",
     "@vueuse/head": "^1.1.26",
     "pinia": "^2.1.4",
@@ -49,6 +51,7 @@
     "@vue/compiler-sfc": "^3.3.4",
     "cross-env": "^7.0.3",
     "eslint": "^8.44.0",
+    "tsconfig": "workspace:*",
     "typescript": "^5.1.6",
     "unocss": "^0.53.5",
     "unplugin-auto-import": "^0.16.6",
