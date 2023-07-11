@@ -4,3 +4,10 @@ build
 .env
 .turbo
 *.tsbuildinfo
+.DS_Store
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+dist-ssr
+.idea/
+*.log
