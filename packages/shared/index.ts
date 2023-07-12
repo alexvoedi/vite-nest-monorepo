@@ -1,1 +1,1 @@
-export * from './src/get-user'
+export * from './src/dtos/get-user/get-user'

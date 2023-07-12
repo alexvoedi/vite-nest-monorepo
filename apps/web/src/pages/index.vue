@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { GetUserResponse } from 'shared';
+import { useQuery } from '@vue/apollo-composable'
+import { GetUserResponse, GetUserRequest } from 'shared';
+import GetUserGql from './get-user.gql'
 
-const user: GetUserResponse = {
-  id: 1,
-  email: 'john.doe@example.com',
+const variables: GetUserRequest = {
+  id: 555,
+  email: 'john.doe@example.com'
 }
+
+const { result, loading, error } = useQuery<GetUserResponse, GetUserRequest>(GetUserGql, variables)
 
 </script>
 
 <template>
-  <h1>Hello World 2</h1>
-  <div>{{ user }}</div>
+  <div v-if="loading">Loading...</div>
+  <div v-else-if="result">{{ result.user }}</div>
+  <div v-else-if="error">{{ error }}</div>
 </template>
 
 <style>

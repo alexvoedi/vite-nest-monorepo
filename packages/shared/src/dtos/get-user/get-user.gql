@@ -1,0 +1,6 @@
+query getUser($id: Int!, $email: String!) {
+    user(id: $id, email: $email) {
+      id
+      email
+    }
+  }
