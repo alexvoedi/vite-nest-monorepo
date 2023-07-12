@@ -36,7 +36,6 @@
     "@nestjs/terminus": "^10.0.1",
     "@nestjs/throttler": "^4.2.1",
     "@nestjs/websockets": "^10.0.5",
-    "bcrypt": "^5.1.0",
     "cache-manager": "^5.2.3",
     "graphql": "^16.7.1",
     "nestjs-pino": "^3.3.0",

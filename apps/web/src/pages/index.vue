@@ -4,7 +4,7 @@ import { gql } from "@apollo/client/core";
 import { GetUser, GetUserQuery } from 'shared'
 
 const user: GetUser = {
-  id: 6,
+  id: "6",
   email: 'john.doe@example.com',
 }
 

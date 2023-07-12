@@ -31,8 +31,3 @@ app.use(createPinia())
 app.use(createHead())
 
 app.mount('#app')
-
-const user: GetUser = {
-  id: 222,
-  email: 'john.doe@example.com',
-}

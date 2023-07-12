@@ -1,13 +1,14 @@
 import { Query, Resolver } from '@nestjs/graphql';
 import { User } from './user';
-import { GetUser } from 'shared';
+import { GetUser, x } from 'shared';
 
 @Resolver(() => User)
 export class UserResolver {
   @Query(() => User)
   async user(): Promise<GetUser> {
+    console.log(x);
     return {
-      id: 222,
+      id: '1',
       email: 'john.doe@example.com',
     };
   }
