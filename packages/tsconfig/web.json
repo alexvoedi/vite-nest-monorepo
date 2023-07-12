@@ -23,16 +23,6 @@
     "incremental": true,
     "types": [
       "vite/client"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
-  },
-  "references": [
-    {
-      "path": "../shared"
-    }
-  ]
+    ]
+  }
 }

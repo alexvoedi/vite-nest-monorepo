@@ -1,14 +1,14 @@
 import { z } from 'zod'
 
-const GetUser = z.object({
-  id: z.string(),
+export const GetUserRequest = z.null()
+
+export const GetUserResponse = z.object({
+  id: z.number(),
   email: z.string().email(),
 })
 
-export type GetUser = z.infer<typeof GetUser>
+export type GetUserResponse = z.infer<typeof GetUserResponse>
 
 export type GetUserQuery = {
-  user: GetUser
+  user: GetUserResponse
 }
-
-export const x = 1

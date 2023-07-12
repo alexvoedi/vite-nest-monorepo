@@ -7,12 +7,14 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 import Inspect from 'vite-plugin-inspect'
 import Checker from 'vite-plugin-checker'
+import TsconfigPaths from 'vite-tsconfig-paths'
 import { VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      'shared': path.resolve(__dirname, '../../packages/shared'),
     },
   },
   plugins: [

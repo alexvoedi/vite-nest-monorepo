@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { Logger } from 'nestjs-pino';
-import compression from '@fastify/compress';
-import helmet from '@fastify/helmet';
+// import compression from '@fastify/compress';
+// import helmet from '@fastify/helmet';
 import {
   FastifyAdapter,
   NestFastifyApplication,
@@ -21,30 +21,30 @@ async function bootstrap() {
 
   app.useLogger(logger);
 
-  await app.register(compression, { encodings: ['gzip', 'deflate'] });
+  // await app.register(compression, { encodings: ['gzip', 'deflate'] });
 
-  await app.register(helmet, {
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: [`'self'`, 'unpkg.com'],
-        styleSrc: [
-          `'self'`,
-          `'unsafe-inline'`,
-          'cdn.jsdelivr.net',
-          'fonts.googleapis.com',
-          'unpkg.com',
-        ],
-        fontSrc: [`'self'`, 'fonts.gstatic.com', 'data:'],
-        imgSrc: [`'self'`, 'data:', 'cdn.jsdelivr.net'],
-        scriptSrc: [
-          `'self'`,
-          `https: 'unsafe-inline'`,
-          `cdn.jsdelivr.net`,
-          `'unsafe-eval'`,
-        ],
-      },
-    },
-  });
+  // await app.register(helmet, {
+  //   contentSecurityPolicy: {
+  //     directives: {
+  //       defaultSrc: [`'self'`, 'unpkg.com'],
+  //       styleSrc: [
+  //         `'self'`,
+  //         `'unsafe-inline'`,
+  //         'cdn.jsdelivr.net',
+  //         'fonts.googleapis.com',
+  //         'unpkg.com',
+  //       ],
+  //       fontSrc: [`'self'`, 'fonts.gstatic.com', 'data:'],
+  //       imgSrc: [`'self'`, 'data:', 'cdn.jsdelivr.net'],
+  //       scriptSrc: [
+  //         `'self'`,
+  //         `https: 'unsafe-inline'`,
+  //         `cdn.jsdelivr.net`,
+  //         `'unsafe-eval'`,
+  //       ],
+  //     },
+  //   },
+  // });
 
   app.enableCors();
 

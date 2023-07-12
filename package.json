@@ -12,9 +12,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "workspaces": [
-    "./packages/*",
-    "./apps/*"
-  ]
+  "license": "ISC"
 }

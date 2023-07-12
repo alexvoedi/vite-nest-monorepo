@@ -10,7 +10,6 @@ import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
-import { GetUser } from 'shared'
 
 const apolloClient = new ApolloClient({
   uri: 'http://localhost:3000/graphql',
