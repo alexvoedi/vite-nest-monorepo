@@ -6,6 +6,7 @@ import { GetUserResponse } from 'shared';
 export class UserResolver {
   @Query(() => User)
   async user(): Promise<GetUserResponse> {
+    console.log('hello world 2');
     return {
       id: 1,
       email: 'john.doe@example.com',
