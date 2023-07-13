@@ -3,5 +3,8 @@
   "dependencies": {
     "typescript": "latest",
     "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*"
   }
 }
